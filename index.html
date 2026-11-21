@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#e87536">
+    <meta name="description" content="RecetaFácil: descubre, prepara y guarda tus recetas favoritas.">
+
+    <title>RecetaFácil</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="img/icon-192.png" type="image/png">
+</head>
+
+<body>
+    <header class="encabezado">
+        <div class="contenedor encabezado-contenido">
+            <div>
+                <h1>🍳 RecetaFácil</h1>
+                <p>Tu cocina, tus recetas y tus sabores favoritos</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor">
+
+        <section class="busqueda">
+            <label for="buscador">Buscar recetas</label>
+            <input
+                type="search"
+                id="buscador"
+                placeholder="Busca por nombre o ingrediente..."
+                autocomplete="off"
+            >
+        </section>
+
+        <section class="categorias">
+            <h2>Explora por categoría</h2>
+            <div class="botones-categorias">
+                <button class="categoria activa" data-categoria="Todas">🍽️ Todas</button>
+                <button class="categoria" data-categoria="Desayuno">🍳 Desayunos</button>
+                <button class="categoria" data-categoria="Comida">🥗 Comidas</button>
+                <button class="categoria" data-categoria="Cena">🌮 Cenas</button>
+                <button class="categoria" data-categoria="Postre">🍰 Postres</button>
+                <button class="categoria" data-categoria="Bebida">🥤 Bebidas</button>
+            </div>
+        </section>
+
+        <section class="seccion-recetas">
+            <div class="titulo-recetas">
+                <div>
+                    <h2>Mis recetas</h2>
+                    <p id="contadorRecetas">20 recetas disponibles</p>
+                </div>
+
+                <div class="acciones-recetas">
+                    <button id="recetaAleatoria" class="boton-sorpresa">
+                        🎲 Sorpréndeme
+                    </button>
+                    <button id="verFavoritas" class="boton-favoritas">
+                        ❤️ Favoritas
+                    </button>
+                </div>
+            </div>
+
+            <div id="listaRecetas" class="lista-recetas"></div>
+        </section>
+
+        <section class="consejo">
+            <h2>💡 Consejo de cocina</h2>
+            <p id="textoConsejo">Organiza tus ingredientes antes de comenzar a cocinar.</p>
+            <button id="nuevoConsejo" class="boton-secundario">Otro consejo</button>
+        </section>
+    </main>
+
+    <div id="modalReceta" class="modal" aria-hidden="true">
+        <div class="modal-contenido" role="dialog" aria-modal="true" aria-labelledby="tituloDetalle">
+            <button id="cerrarModal" class="cerrar-modal" aria-label="Cerrar ventana">×</button>
+            <div id="detalleReceta"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 RecetaFácil - Recetario digital</p>
+        <p>Proyecto de aplicación web progresiva</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
